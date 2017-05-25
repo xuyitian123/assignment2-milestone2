@@ -3,15 +3,18 @@
 <head><style type="text/css">
 </style>
 <div id="header">
-<img src="images/LOGO1.png" alt="" width="176" height="261"/>
+<img src="images/LOGO1.png" alt="" width="126" height="191"/>
 Online order form
 <meta charset="utf-8">
 <title>U</title>
 <link href="css/WEBSITECSS.css" rel="stylesheet" type="text/css">
-<table width="200" border="1" align="center" cellpadding="1" cellspacing="1">
+
+</head>
+
+<body><div id="banner"><table width="800" border="1" align="center" cellpadding="1" cellspacing="1">
   <tbody>
     <tr>
-      <th scope="col"><td><a href="index.html">Home</a></td></th>
+		<th scope="col"><td><a href="index.html">Home</a></td></th>
       <th scope="col"><td><a href="Ourshop&Vantanity.html">Our shop&Vantanity</a></td></th>
       <th scope="col"><td><a href="Ourproducts.html">Our products</a></td></th>
       <th scope="col"><td><a href="Ourevents.html">Our events</a></td></th>
@@ -19,22 +22,22 @@ Online order form
       <th scope="col"><td><a href="Contactus.html">Contact us</a></td></th>
     </tr>
   </tbody>
-</table>
-</div>
-</head>
+</table> </div>
+<div id="body">
 
-<body><div id="body">
-	<form>
 <table width="800" border="1" align="center" cellspacing="1" cellpadding="1">
   <tbody>
     <tr>
-      <td>First name:</td>
-      <td><input type="text" size="15" maxlength="50"></td>
+     <form action="" method="post" name="mainForm" id="mainForm" onsubmit="return checkForm();">
+     <p>
+      <td><label for="name">Name: <img src="cross.png" alt="X" name="nameTick" width="12" height="12"
+                                              id="nameTick"/></label></td>
+      <td><input type="text" name="name" id="name" size="20" autofocus onKeyUp="nameEntered(this);"/></td>
+      </p>
+      <div class="notebox" id="output">&nbsp;</div>
+      
     </tr>
-    <tr>
-      <td>Last name:</td>
-      <td><input type="text" size="15" maxlength="50"></td>
-    </tr>
+    
     <tr>
       <td>Gender:</td>
       <td>Male<input name="gender" type="radio"> Female<input name="gender" type="radio"></td>
@@ -67,6 +70,22 @@ Online order form
       <td>Products:</td>
       <td><input name="Products" type="tect" required id="Products"></td>
     </tr>
+    
+    <td><label>How do you rate the web site? <img src="cross.png" alt="X" name="rateTick" width="12"
+                                                  height="12" id="rateTick"/><br>
+            (<a href="#" onclick="clearRating(); return false">click here to clear selection</a>) </label></td>
+        <td><fieldset>
+            <input type="radio" name="siterating" id="sitepoor" value="Poor"
+                   onclick="checkSiteRating(); alert('Please make sure you write comments below about why the site is poor.'); document.mainForm.comments.focus()"/>
+            <label for="sitepoor">Poor</label>
+            <br>
+            <input type="radio" name="siterating" id="sitegood" value="Good" onclick="checkSiteRating()"/>
+            <label for="sitegood">Good - useful, but need to be better</label>
+            <br>
+            <input type="radio" name="siterating" id="siteverygood" value="VeryGood" onclick="checkSiteRating()"/>
+            <label for="siteverygood">Excellent - a very useful site</label>
+        </fieldset></td>
+    </tr>
     <tr>
     	<td>Comments:</td>
     	<td><input name="Comments" type="text" required id="Comments" size="50" maxlength="100"></td>
@@ -79,5 +98,6 @@ Online order form
 <div id="footer">
 	Fish-tastic JCU Singapore
 </div>
+<script src="scripts.js"></script>
 </body>
 </html>
