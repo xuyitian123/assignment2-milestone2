@@ -11,7 +11,7 @@ Online order form
 
 </head>
 
-<body><div id="banner"><table width="800" border="1" align="center" cellpadding="1" cellspacing="1">
+<body><div id="banner"><table width="800" border="1"height="80" align="center" cellpadding="1" cellspacing="1">
   <tbody>
     <tr>
 		<th scope="col"><td><a href="index.html">Home</a></td></th>
@@ -23,9 +23,9 @@ Online order form
     </tr>
   </tbody>
 </table> </div>
-<div id="body">
-
-<table width="800" border="1" align="center" cellspacing="1" cellpadding="1">
+<div id="body3">
+<p>Please fill up the form if you want to buy the products.If you have feedback,you could also fill up the form.</p>
+<table width="800" border="1" height="80"align="center" cellspacing="1" cellpadding="1">
   <tbody>
     <tr>
      <form action="" method="post" name="mainForm" id="mainForm" onsubmit="return checkForm();">
@@ -67,11 +67,11 @@ Online order form
       <td><input name="Phone number" type="number" required id="Phone number"></td>
     </tr>
 	  <tr>
-      <td>Products:</td>
+      <td>choose the products that you want to buy:</td>
       <td><input name="Products" type="tect" required id="Products"></td>
     </tr>
     
-    <td><label>How do you rate the web site? <img src="cross.png" alt="X" name="rateTick" width="12"
+    <td><label>How do you feel about the web site? <img src="cross.png" alt="X" name="rateTick" width="12"
                                                   height="12" id="rateTick"/><br>
             (<a href="#" onclick="clearRating(); return false">click here to clear selection</a>) </label></td>
         <td><fieldset>
@@ -83,7 +83,7 @@ Online order form
             <label for="sitegood">Good - useful, but need to be better</label>
             <br>
             <input type="radio" name="siterating" id="siteverygood" value="VeryGood" onclick="checkSiteRating()"/>
-            <label for="siteverygood">Excellent - a very useful site</label>
+            <label for="siteverygood">Perfect - a very useful site</label>
         </fieldset></td>
     </tr>
     <tr>
